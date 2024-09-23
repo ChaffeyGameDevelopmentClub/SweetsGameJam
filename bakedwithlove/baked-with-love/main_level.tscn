@@ -1,3 +1,40 @@
-[gd_scene format=3 uid="uid://byc2oqdlslc5p"]
+[gd_scene load_steps=6 format=3 uid="uid://byc2oqdlslc5p"]
+
+[ext_resource type="PackedScene" uid="uid://4nv48texs04x" path="res://player.tscn" id="1_b4f2r"]
+[ext_resource type="PackedScene" uid="uid://bxf7xhw400i5u" path="res://pause_menu.tscn" id="2_xkfqt"]
+[ext_resource type="Script" path="res://camera.gd" id="3_vvhyg"]
+[ext_resource type="PackedScene" uid="uid://fs3dlqkgmvlh" path="res://collectible.tscn" id="4_djq7a"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_gtroy"]
+size = Vector2(17, 4.46429)
 
 [node name="MainLevel" type="Node2D"]
+
+[node name="Floor" type="StaticBody2D" parent="."]
+position = Vector2(-267, 615)
+scale = Vector2(100, 10)
+metadata/_edit_group_ = true
+
+[node name="ColorRect" type="ColorRect" parent="Floor"]
+offset_right = 17.0
+offset_bottom = 4.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Floor"]
+position = Vector2(8.5, 2.23214)
+shape = SubResource("RectangleShape2D_gtroy")
+
+[node name="player" parent="." instance=ExtResource("1_b4f2r")]
+position = Vector2(340, 547)
+
+[node name="Pause Menu" parent="." instance=ExtResource("2_xkfqt")]
+offset_left = 9.0
+offset_top = -3.0
+offset_right = 47.0
+offset_bottom = 35.0
+
+[node name="Camera" type="Camera2D" parent="."]
+position = Vector2(786, 313)
+script = ExtResource("3_vvhyg")
+
+[node name="Collectible" parent="." instance=ExtResource("4_djq7a")]
+position = Vector2(750, 541)
