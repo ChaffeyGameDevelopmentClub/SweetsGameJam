@@ -1,5 +1,7 @@
 extends Node
 
+var BluePoints: int = 0
+var RedPoints: int = 0
 
 # Called when the node enters the scene tree for the first time.
 func _ready() -> void:

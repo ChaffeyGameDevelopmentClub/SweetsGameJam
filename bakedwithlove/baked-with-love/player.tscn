@@ -130,11 +130,11 @@ animations = [{
 size = Vector2(20, 35)
 
 [node name="player" type="CharacterBody2D"]
-scale = Vector2(1.5, 1.5)
+scale = Vector2(2.5, 2.5)
 script = ExtResource("1_aueos")
-speed = 300.0
-jump_height = 700.0
-jump_to_top = 0.5
+speed = 400.0
+jump_height = 300.0
+jump_to_top = 1.0
 jump_to_bottom = 0.5
 metadata/_edit_group_ = true
 
