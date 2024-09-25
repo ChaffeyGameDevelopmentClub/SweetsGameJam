@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cf42lljpjh2rj"
+path="res://.godot/imported/End Cutscene.mp3-bd071dbbe277957b177a8d6f63993711.mp3str"
+
+[deps]
+
+source_file="res://Sounds/End Cutscene.mp3"
+dest_files=["res://.godot/imported/End Cutscene.mp3-bd071dbbe277957b177a8d6f63993711.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

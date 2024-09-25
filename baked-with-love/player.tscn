@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://4nv48texs04x"]
+[gd_scene load_steps=24 format=3 uid="uid://4nv48texs04x"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_aueos"]
 [ext_resource type="Texture2D" uid="uid://cvf337w12anhj" path="res://Textures/AnimationSprites/skater crouching-Sheet.png" id="2_j7ash"]
@@ -6,6 +6,8 @@
 [ext_resource type="Texture2D" uid="uid://dxsytsu1h4uq6" path="res://Textures/AnimationSprites/skater jump-Sheet.png" id="4_xyr11"]
 [ext_resource type="Texture2D" uid="uid://c4dhtw8gxvufm" path="res://Textures/AnimationSprites/skater braking-Sheet.png" id="5_31o0r"]
 [ext_resource type="Texture2D" uid="uid://beeoy7f3jxdjj" path="res://Textures/AnimationSprites/skateboard speed up-Sheet.png" id="6_ieb3r"]
+[ext_resource type="AudioStream" uid="uid://6gaql3x4q87m" path="res://Sounds/Skateboard Boost.mp3" id="7_tfjgd"]
+[ext_resource type="AudioStream" uid="uid://7nncvnq22kej" path="res://Sounds/Skateboard Brake.mp3" id="8_lv8r4"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2tx2"]
 atlas = ExtResource("2_j7ash")
@@ -129,13 +131,15 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krlxw"]
 size = Vector2(20, 35)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("boost_sfx", "brake_sfx")]
 scale = Vector2(2.5, 2.5)
 script = ExtResource("1_aueos")
 speed = 400.0
 jump_height = 300.0
 jump_to_top = 1.0
 jump_to_bottom = 0.5
+boost_sfx = NodePath("Boostsfx")
+brake_sfx = NodePath("Brakesfx")
 metadata/_edit_group_ = true
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
@@ -156,3 +160,11 @@ limit_left = -1275
 limit_top = -2000
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+
+[node name="Boostsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_tfjgd")
+volume_db = -10.841
+
+[node name="Brakesfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_lv8r4")
+volume_db = -23.806

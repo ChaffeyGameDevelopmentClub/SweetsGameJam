@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dwt53174fmr5n"
+path="res://.godot/imported/Skateboard Duck.mp3-990c96d55581a7b8d1684e7a51fcd285.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Skateboard Duck.mp3"
+dest_files=["res://.godot/imported/Skateboard Duck.mp3-990c96d55581a7b8d1684e7a51fcd285.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

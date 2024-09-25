@@ -1,8 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cruekiimlfmij"]
+[gd_scene load_steps=6 format=3 uid="uid://cruekiimlfmij"]
 
 [ext_resource type="Texture2D" uid="uid://cube0kx5h0um3" path="res://icon.svg" id="1_hkr8q"]
 [ext_resource type="Script" path="res://UI/Title Screen/playbutton.gd" id="2_1xpxm"]
 [ext_resource type="Script" path="res://UI/Title Screen/exit_button.gd" id="3_bl55b"]
+[ext_resource type="AudioStream" uid="uid://css0lmivki3m4" path="res://Sounds/UI Select.mp3" id="4_rsfc4"]
+[ext_resource type="AudioStream" uid="uid://cam0ratux0mp1" path="res://Sounds/UI Navigation.mp3" id="5_tdnox"]
 
 [node name="Title Screen" type="Node2D"]
 
@@ -47,5 +49,14 @@ theme_override_font_sizes/normal_font_size = 50
 text = "Baked With Love"
 fit_content = true
 
+[node name="Pressbutton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_rsfc4")
+
+[node name="Enterbutton" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_tdnox")
+parameters/looping = false
+
+[connection signal="mouse_entered" from="UI/Playbutton" to="UI/Playbutton" method="_on_mouse_entered"]
 [connection signal="pressed" from="UI/Playbutton" to="UI/Playbutton" method="_on_pressed"]
+[connection signal="mouse_entered" from="UI/ExitButton" to="UI/ExitButton" method="_on_mouse_entered"]
 [connection signal="pressed" from="UI/ExitButton" to="UI/ExitButton" method="_on_pressed"]

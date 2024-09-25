@@ -13,4 +13,14 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	$"../../Pressbutton".play()
 	get_tree().quit()
+
+
+func _on_area_2d_mouse_entered() -> void:
+	$"../../Enterbutton".play()
+	
+
+
+func _on_mouse_entered() -> void:
+	$"../../Pressbutton".play()

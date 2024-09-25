@@ -12,4 +12,9 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
+	$"../../Pressbutton".play()
 	get_tree().change_scene_to_file("res://main_level.tscn")
+
+
+func _on_mouse_entered() -> void:
+	$"../../Enterbutton".play()
