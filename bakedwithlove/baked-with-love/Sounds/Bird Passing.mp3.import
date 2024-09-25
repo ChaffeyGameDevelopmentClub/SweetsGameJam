@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://scjf7buvhfg2"
+path="res://.godot/imported/Bird Passing.mp3-2c62a2f1fa5f38089fda7f4978122ca5.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Bird Passing.mp3"
+dest_files=["res://.godot/imported/Bird Passing.mp3-2c62a2f1fa5f38089fda7f4978122ca5.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

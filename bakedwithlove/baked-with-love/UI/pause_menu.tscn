@@ -1,0 +1,21 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxf7xhw400i5u"]
+
+[ext_resource type="Texture2D" uid="uid://cube0kx5h0um3" path="res://icon.svg" id="1_1wvkn"]
+[ext_resource type="Script" path="res://UI/pause_menu.gd" id="1_mjww7"]
+
+[node name="Pause Menu" type="Control"]
+process_mode = 3
+layout_mode = 3
+anchors_preset = 0
+offset_right = 38.0
+offset_bottom = 38.0
+script = ExtResource("1_mjww7")
+
+[node name="pauseButton" type="TextureButton" parent="."]
+layout_mode = 0
+offset_right = 101.0
+offset_bottom = 95.0
+scale = Vector2(1.04, 1.04)
+texture_normal = ExtResource("1_1wvkn")
+ignore_texture_size = true
+stretch_mode = 0

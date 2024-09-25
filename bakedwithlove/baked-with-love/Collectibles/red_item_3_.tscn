@@ -1,0 +1,40 @@
+[gd_scene load_steps=7 format=3 uid="uid://fap03mio247c"]
+
+[ext_resource type="Texture2D" uid="uid://cov06iuvnfv64" path="res://Textures/Assets/Collectibles.png" id="1_iu01t"]
+[ext_resource type="Script" path="res://Collectibles/red_item_3_.gd" id="1_qysyc"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mh478"]
+atlas = ExtResource("1_iu01t")
+region = Rect2(14, 91, 22, 33)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_noqby"]
+
+[sub_resource type="Gradient" id="Gradient_3x44m"]
+offsets = PackedFloat32Array(0, 0.678571)
+colors = PackedColorArray(1, 1, 1, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_ofcet"]
+gradient = SubResource("Gradient_3x44m")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="RedItem3_" type="Area2D"]
+scale = Vector2(2, 2)
+script = ExtResource("1_qysyc")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+light_mask = 2
+scale = Vector2(5, 5)
+texture = SubResource("AtlasTexture_mh478")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(7.00749, 7.03176)
+shape = SubResource("CircleShape2D_noqby")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(5, 5)
+color = Color(0.870588, 0.647059, 0.643137, 1)
+energy = 5.0
+texture = SubResource("GradientTexture2D_ofcet")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]
