@@ -17,6 +17,7 @@ colors = PackedColorArray(1, 1, 1, 1, 0.0644068, 0.0644068, 0.0644068, 1, 0, 0, 
 gradient = SubResource("Gradient_ygsrj")
 fill = 1
 fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.856148, 0.139211)
 
 [node name="BigTrashObstacle" type="Area2D"]
 scale = Vector2(10, 10)
