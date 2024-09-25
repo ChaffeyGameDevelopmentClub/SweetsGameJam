@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://bdwnfl54qewkx"]
+
+[ext_resource type="Texture2D" uid="uid://cm5jj71343mpt" path="res://Textures/AnimationSprites/Pigeon Sprite Sheet.png" id="1_4i7vn"]
+[ext_resource type="Script" path="res://Obstacles/bird_obstacle.gd" id="1_5x4tp"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_u7y2r"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_mthci"]
+atlas = ExtResource("1_4i7vn")
+region = Rect2(0, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_js6kc"]
+atlas = ExtResource("1_4i7vn")
+region = Rect2(16, 128, 16, 16)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_vneka"]
+atlas = ExtResource("1_4i7vn")
+region = Rect2(32, 128, 16, 16)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ulpmt"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_mthci")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_js6kc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_vneka")
+}],
+"loop": true,
+"name": &"Flying",
+"speed": 5.0
+}]
+
+[sub_resource type="Gradient" id="Gradient_ej3qp"]
+offsets = PackedFloat32Array(0, 0.772727, 0.957792)
+colors = PackedColorArray(1, 1, 1, 1, 0.0644068, 0.0644068, 0.0644068, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_xyhfe"]
+gradient = SubResource("Gradient_ej3qp")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+
+[node name="BirdObstacle" type="Area2D"]
+light_mask = 2
+scale = Vector2(20, 20)
+script = ExtResource("1_5x4tp")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+scale = Vector2(0.5, 0.5)
+shape = SubResource("CircleShape2D_u7y2r")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+light_mask = 2
+sprite_frames = SubResource("SpriteFrames_ulpmt")
+animation = &"Flying"
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+scale = Vector2(0.5, 0.5)
+color = Color(0.952941, 0.12549, 0.0745098, 1)
+energy = 5.0
+texture = SubResource("GradientTexture2D_xyhfe")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -148,3 +148,10 @@ animation = &"Idle"
 position = Vector2(0, -30)
 scale = Vector2(5, 5)
 shape = SubResource("RectangleShape2D_krlxw")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+position = Vector2(404.4, -332.8)
+zoom = Vector2(0.2, 0.2)
+limit_top = -2000
+position_smoothing_enabled = true
+position_smoothing_speed = 3.0

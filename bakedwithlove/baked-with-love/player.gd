@@ -32,7 +32,7 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		coyoteTime()
 		velocity += getgravity() * delta
-	print(velocity)
+	
 	
 	
 	# Handles Jump. Sets up Jump Buffer timer
@@ -44,7 +44,8 @@ func _physics_process(delta: float) -> void:
 			sprite.play("Jump")
 	# Handles fast falls. Players that want to cut their fall short. Work in progress
 	if not Input.is_action_pressed("Jump") and not is_on_floor():
-		velocity += (Vector2(0,5000)+getgravity()) * delta
+		velocity += (Vector2(0,700)+getgravity()) * delta
+	
 	
 	# Handles Speeding up and Slowing down
 	var direction := Input.get_axis("Left", "Right")

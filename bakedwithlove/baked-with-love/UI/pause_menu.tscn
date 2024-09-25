@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://bxf7xhw400i5u"]
 
 [ext_resource type="Texture2D" uid="uid://cube0kx5h0um3" path="res://icon.svg" id="1_1wvkn"]
-[ext_resource type="Script" path="res://pause_menu.gd" id="1_mjww7"]
+[ext_resource type="Script" path="res://UI/pause_menu.gd" id="1_mjww7"]
 
 [node name="Pause Menu" type="Control"]
 process_mode = 3
