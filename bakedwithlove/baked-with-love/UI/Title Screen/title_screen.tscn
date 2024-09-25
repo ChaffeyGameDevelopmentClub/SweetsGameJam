@@ -1,7 +1,8 @@
-[gd_scene load_steps=4 format=3 uid="uid://cruekiimlfmij"]
+[gd_scene load_steps=5 format=3 uid="uid://cruekiimlfmij"]
 
-[ext_resource type="Texture2D" uid="uid://cube0kx5h0um3" path="res://icon.svg" id="1_hkr8q"]
+[ext_resource type="Texture2D" uid="uid://dxbcvftx5obde" path="res://Textures/UI Assets/Large Buttons/Large Buttons/Play Button.png" id="1_b0nkp"]
 [ext_resource type="Script" path="res://UI/Title Screen/playbutton.gd" id="2_1xpxm"]
+[ext_resource type="Texture2D" uid="uid://capn8a4pu4kyf" path="res://Textures/UI Assets/Large Buttons/Large Buttons/Exit Button.png" id="3_50e5g"]
 [ext_resource type="Script" path="res://UI/Title Screen/exit_button.gd" id="3_bl55b"]
 
 [node name="Title Screen" type="Node2D"]
@@ -17,22 +18,21 @@ offset_bottom = 39.0
 layout_mode = 0
 offset_left = 450.0
 offset_top = 263.0
-offset_right = 490.0
-offset_bottom = 303.0
-scale = Vector2(5.49618, 1.62583)
-texture_normal = ExtResource("1_hkr8q")
+offset_right = 650.0
+offset_bottom = 333.0
+action_mode = 0
+texture_normal = ExtResource("1_b0nkp")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_1xpxm")
 
 [node name="ExitButton" type="TextureButton" parent="UI"]
 layout_mode = 0
-offset_left = 426.0
-offset_top = 426.0
-offset_right = 466.0
-offset_bottom = 466.0
-scale = Vector2(6.1791, 1.43703)
-texture_normal = ExtResource("1_hkr8q")
+offset_left = 458.0
+offset_top = 423.0
+offset_right = 658.0
+offset_bottom = 493.0
+texture_normal = ExtResource("3_50e5g")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_bl55b")

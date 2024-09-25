@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://cshkt765ejb0k"]
+
+[ext_resource type="Texture2D" uid="uid://jwg7k1rnmc6h" path="res://Textures/UI Assets/blue_progress_bar.png" id="1_6dhqd"]
+[ext_resource type="Script" path="res://UI/player_hud.gd" id="1_cshgc"]
+[ext_resource type="Texture2D" uid="uid://dwgc0ec2yn0dw" path="res://Textures/UI Assets/red_progress_bar.png" id="2_ii30r"]
+
+[node name="PlayerHUD" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cshgc")
+
+[node name="BlueProgress" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_right = 32.0
+offset_bottom = 32.0
+scale = Vector2(18, 1)
+max_value = 33.0
+texture_progress = ExtResource("1_6dhqd")
+
+[node name="RedProgress" type="TextureProgressBar" parent="."]
+layout_mode = 0
+offset_left = 1152.0
+offset_top = 32.0
+offset_right = 1184.0
+offset_bottom = 64.0
+rotation = 3.14159
+scale = Vector2(18, 1)
+max_value = 33.0
+texture_progress = ExtResource("2_ii30r")
