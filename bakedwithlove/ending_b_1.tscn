@@ -1,0 +1,22 @@
+[gd_scene load_steps=3 format=3 uid="uid://bwxyn4v3mxtwq"]
+
+[ext_resource type="Script" path="res://ending_b_1.gd" id="1_7n076"]
+[ext_resource type="Texture2D" uid="uid://dax0frlh2v428" path="res://Smarties Much/6BB4495D-1C06-46FC-86A4-372C993011F7.png" id="2_f7e2d"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_7n076")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.074
+anchor_bottom = 0.126
+offset_right = 1067.75
+offset_bottom = 576.352
+color = Color(0, 0, 0, 1)
+
+[node name="6bb4495d-1c06-46fc-86a4-372c993011f7" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(582, 246)
+scale = Vector2(0.2, 0.2)
+texture = ExtResource("2_f7e2d")

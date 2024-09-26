@@ -1,4 +1,4 @@
-[gd_scene load_steps=39 format=4 uid="uid://byc2oqdlslc5p"]
+[gd_scene load_steps=40 format=4 uid="uid://byc2oqdlslc5p"]
 
 [ext_resource type="PackedScene" uid="uid://4nv48texs04x" path="res://player.tscn" id="1_b4f2r"]
 [ext_resource type="Script" path="res://main_level.gd" id="1_dl8hb"]
@@ -18,8 +18,9 @@
 [ext_resource type="PackedScene" uid="uid://bdwnfl54qewkx" path="res://Obstacles/bird_obstacle.tscn" id="15_46x6v"]
 [ext_resource type="PackedScene" uid="uid://7bap4gx2qpfg" path="res://Obstacles/small_trash_obstacle.tscn" id="16_w8t17"]
 [ext_resource type="PackedScene" uid="uid://506vbiey0cpo" path="res://Obstacles/big_trash_obstacle.tscn" id="17_ml3nw"]
-[ext_resource type="PackedScene" uid="uid://bxf7xhw400i5u" path="res://UI/pause_menu.tscn" id="20_1osmr"]
 [ext_resource type="PackedScene" uid="uid://cshkt765ejb0k" path="res://UI/player_hud.tscn" id="20_4hc47"]
+[ext_resource type="PackedScene" uid="uid://bxf7xhw400i5u" path="res://UI/pause_menu.tscn" id="21_84bsv"]
+[ext_resource type="Script" path="res://super heaven.gd" id="21_crla7"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cg5mw"]
 texture = ExtResource("5_m5ck7")
@@ -1696,11 +1697,17 @@ position = Vector2(42628, 919)
 [node name="BigTrashObstacle19" parent="Obstacles" instance=ExtResource("17_ml3nw")]
 position = Vector2(42869, 838)
 
+[node name="Node" type="Node" parent="."]
+
+[node name="Area2D" type="Area2D" parent="Node"]
+position = Vector2(-0.0078125, 0)
+script = ExtResource("21_crla7")
+
 [node name="player" parent="." instance=ExtResource("1_b4f2r")]
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-position = Vector2(-1098, 666)
+position = Vector2(-1064, 511)
 speed = 1000.0
 jump_height = 1500.0
 
@@ -1708,7 +1715,7 @@ jump_height = 1500.0
 
 [node name="PlayerHUD" parent="CanvasLayer" instance=ExtResource("20_4hc47")]
 
-[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("20_1osmr")]
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("21_84bsv")]
 
 [node name="Heaven" type="PointLight2D" parent="."]
 top_level = true
@@ -1716,3 +1723,7 @@ position = Vector2(129548, 1878.5)
 scale = Vector2(136.445, 140.859)
 energy = 144.35
 texture = SubResource("GradientTexture2D_o01yb")
+
+[node name="ASCENSION" parent="." instance=ExtResource("13_8pmxo")]
+position = Vector2(128897, 1106)
+script = ExtResource("21_crla7")

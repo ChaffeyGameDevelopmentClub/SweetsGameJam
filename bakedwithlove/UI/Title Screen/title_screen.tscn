@@ -1,51 +1,52 @@
-[gd_scene load_steps=5 format=3 uid="uid://cruekiimlfmij"]
+[gd_scene load_steps=6 format=3 uid="uid://cruekiimlfmij"]
 
-[ext_resource type="Texture2D" uid="uid://dxbcvftx5obde" path="res://Textures/UI Assets/Large Buttons/Large Buttons/Play Button.png" id="1_b0nkp"]
+[ext_resource type="Texture2D" uid="uid://8h1s37rlv5v6" path="res://Menu/title screen.png" id="1_t8hm2"]
 [ext_resource type="Script" path="res://UI/Title Screen/playbutton.gd" id="2_1xpxm"]
-[ext_resource type="Texture2D" uid="uid://capn8a4pu4kyf" path="res://Textures/UI Assets/Large Buttons/Large Buttons/Exit Button.png" id="3_50e5g"]
+[ext_resource type="Texture2D" uid="uid://e2x3ascg64kf" path="res://Menu/start_skate.png" id="2_yfuuq"]
 [ext_resource type="Script" path="res://UI/Title Screen/exit_button.gd" id="3_bl55b"]
+[ext_resource type="Texture2D" uid="uid://bo085w3814lqm" path="res://Menu/exit_skate.png" id="4_frn45"]
 
 [node name="Title Screen" type="Node2D"]
 
 [node name="UI" type="Control" parent="."]
+process_mode = 3
 layout_mode = 3
 anchors_preset = 0
 offset_top = -1.0
 offset_right = 40.0
 offset_bottom = 39.0
 
-[node name="Playbutton" type="TextureButton" parent="UI"]
+[node name="ColorRect" type="ColorRect" parent="UI"]
 layout_mode = 0
-offset_left = 450.0
-offset_top = 263.0
-offset_right = 650.0
-offset_bottom = 333.0
-action_mode = 0
-texture_normal = ExtResource("1_b0nkp")
-ignore_texture_size = true
-stretch_mode = 0
-script = ExtResource("2_1xpxm")
+offset_right = 1185.0
+offset_bottom = 659.0
+color = Color(0.133196, 0.133196, 0.133196, 1)
 
 [node name="ExitButton" type="TextureButton" parent="UI"]
-layout_mode = 0
-offset_left = 458.0
-offset_top = 423.0
-offset_right = 658.0
-offset_bottom = 493.0
-texture_normal = ExtResource("3_50e5g")
+offset_left = 450.0
+offset_top = 516.0
+offset_right = 650.0
+offset_bottom = 586.0
+texture_normal = ExtResource("4_frn45")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_bl55b")
 
-[node name="Title" type="RichTextLabel" parent="UI"]
-layout_mode = 0
-offset_left = 354.0
-offset_top = 115.0
-offset_right = 773.0
-offset_bottom = 184.0
-theme_override_font_sizes/normal_font_size = 50
-text = "Baked With Love"
-fit_content = true
+[node name="Playbutton" type="TextureButton" parent="UI"]
+offset_left = 450.0
+offset_top = 407.0
+offset_right = 650.0
+offset_bottom = 477.0
+action_mode = 0
+texture_normal = ExtResource("2_yfuuq")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_1xpxm")
 
-[connection signal="pressed" from="UI/Playbutton" to="UI/Playbutton" method="_on_pressed"]
+[node name="TitleScreen" type="Sprite2D" parent="UI"]
+position = Vector2(569, 225)
+scale = Vector2(1.98864, 1.87981)
+texture = ExtResource("1_t8hm2")
+
 [connection signal="pressed" from="UI/ExitButton" to="UI/ExitButton" method="_on_pressed"]
+[connection signal="pressed" from="UI/Playbutton" to="UI/Playbutton" method="_on_pressed"]
