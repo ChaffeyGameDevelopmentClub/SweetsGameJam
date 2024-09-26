@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=3 uid="uid://hbr0lnfj0n0x"]
+
+[ext_resource type="Script" path="res://intro_scene_2.gd" id="1_egnul"]
+[ext_resource type="FontFile" uid="uid://bdgggjjkgyjut" path="res://rainyhearts.ttf" id="2_rlo13"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_egnul")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.074
+anchor_bottom = 0.126
+offset_right = 1067.75
+offset_bottom = 576.352
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 320.0
+offset_top = 406.0
+offset_right = 772.0
+offset_bottom = 517.0
+theme_override_fonts/normal_font = ExtResource("2_rlo13")
+theme_override_font_sizes/normal_font_size = 50
+text = "And then a war broke out lol."
+tab_size = 10

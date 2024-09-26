@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://t4smljh222hc"
+path="res://.godot/imported/Sick Kickflip (jump).mp3-af0961a2bf5724391430d4c2e4b3bc12.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Sick Kickflip (jump).mp3"
+dest_files=["res://.godot/imported/Sick Kickflip (jump).mp3-af0961a2bf5724391430d4c2e4b3bc12.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
