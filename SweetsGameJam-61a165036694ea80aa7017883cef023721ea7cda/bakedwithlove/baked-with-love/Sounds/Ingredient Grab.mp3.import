@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://brc75xfdjs4hv"
+path="res://.godot/imported/Ingredient Grab.mp3-d02878332f4f2c59480498d5479b497d.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Ingredient Grab.mp3"
+dest_files=["res://.godot/imported/Ingredient Grab.mp3-d02878332f4f2c59480498d5479b497d.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

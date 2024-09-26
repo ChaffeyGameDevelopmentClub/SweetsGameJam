@@ -1,0 +1,33 @@
+[gd_scene load_steps=4 format=3 uid="uid://hbr0lnfj0n0x"]
+
+[ext_resource type="Script" path="res://intro_scene_3.gd" id="1_2ov8q"]
+[ext_resource type="FontFile" uid="uid://bdgggjjkgyjut" path="res://rainyhearts.ttf" id="2_rlo13"]
+[ext_resource type="Texture2D" uid="uid://byucjivfpq3cp" path="res://Cutscenes/scene 2.png" id="3_dtmtf"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2ov8q")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.074
+anchor_bottom = 0.126
+offset_right = 1067.75
+offset_bottom = 576.352
+color = Color(0, 0, 0, 1)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 71.0
+offset_top = 406.0
+offset_right = 1093.0
+offset_bottom = 605.0
+theme_override_fonts/normal_font = ExtResource("2_rlo13")
+theme_override_font_sizes/normal_font_size = 50
+text = "That gives YOU an idea! What if... You were to skate around and get a bunch of ingredients to impress one of your crushes? Delightfully devilish."
+tab_size = 10
+
+[node name="Scene2" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(590, 208)
+scale = Vector2(3.00625, 2.05)
+texture = ExtResource("3_dtmtf")

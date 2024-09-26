@@ -1,0 +1,46 @@
+[gd_scene load_steps=8 format=3 uid="uid://506vbiey0cpo"]
+
+[ext_resource type="Script" path="res://Obstacles/big_trash_obstacle.gd" id="1_1xx8e"]
+[ext_resource type="Texture2D" uid="uid://dvx8rxq2lbsoe" path="res://Textures/Assets/Props-01.png" id="2_kg7lk"]
+[ext_resource type="AudioStream" uid="uid://bqf3yhxsp1g4k" path="res://Sounds/Obstacle Impact (1).mp3" id="3_iglj4"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_thio0"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_38uny"]
+atlas = ExtResource("2_kg7lk")
+region = Rect2(48, 0, 32, 32)
+
+[sub_resource type="Gradient" id="Gradient_ygsrj"]
+offsets = PackedFloat32Array(0, 0.772727, 0.957792)
+colors = PackedColorArray(1, 1, 1, 1, 0.0644068, 0.0644068, 0.0644068, 1, 0, 0, 0, 1)
+
+[sub_resource type="GradientTexture2D" id="GradientTexture2D_5l0f6"]
+gradient = SubResource("Gradient_ygsrj")
+fill = 1
+fill_from = Vector2(0.5, 0.5)
+fill_to = Vector2(0.856148, 0.139211)
+
+[node name="BigTrashObstacle" type="Area2D"]
+scale = Vector2(10, 10)
+script = ExtResource("1_1xx8e")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.1, 5.2)
+scale = Vector2(1.31, 1.31)
+shape = SubResource("CircleShape2D_thio0")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+self_modulate = Color(0.952941, 0.12549, 0.0745098, 1)
+light_mask = 2
+texture = SubResource("AtlasTexture_38uny")
+
+[node name="PointLight2D" type="PointLight2D" parent="."]
+color = Color(0.952941, 0.12549, 0.0745098, 1)
+energy = 5.0
+texture = SubResource("GradientTexture2D_5l0f6")
+
+[node name="obssfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_iglj4")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://7y7x4josd6rt"
+path="res://.godot/imported/Skateboard Rolling.mp3-86d146748cfc8914553e15012c681736.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Skateboard Rolling.mp3"
+dest_files=["res://.godot/imported/Skateboard Rolling.mp3-86d146748cfc8914553e15012c681736.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -15,5 +15,5 @@ func _process(delta: float) -> void:
 
 
 func _on_pressed() -> void:
-	print("Hi")
+	print("Hi upload this")
 	SceneTransition.change_scene_to_file("res://intro_scene.tscn")

@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bxrcg4kj3a7vr"]
+
+[ext_resource type="Script" path="res://intro_scene_2.gd" id="1_2e2k4"]
+[ext_resource type="FontFile" uid="uid://bdgggjjkgyjut" path="res://rainyhearts.ttf" id="2_l5ixi"]
+[ext_resource type="Texture2D" uid="uid://dwhl2fbx2h288" path="res://Cutscenes/Scene 3.png" id="3_huqpr"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_2e2k4")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.074
+anchor_bottom = 0.126
+offset_right = 1067.75
+offset_bottom = 576.352
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.210938
+anchor_right = 0.203993
+anchor_bottom = 0.212963
+offset_left = 384.0
+offset_top = 406.0
+offset_right = 773.0
+offset_bottom = 466.0
+theme_override_fonts/normal_font = ExtResource("2_l5ixi")
+theme_override_font_sizes/normal_font_size = 50
+text = "Excercising no caution for yourself you grab your skateboard and head out...
+               For a sweet treat."
+tab_size = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Scene3" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(566, 195)
+scale = Vector2(3.51064, 2.86486)
+texture = ExtResource("3_huqpr")

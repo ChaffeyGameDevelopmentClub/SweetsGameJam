@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6bmnbr34erjo"
+path="res://.godot/imported/Car Passing.mp3-86c26a4d82fd255eb235e9a3aedc2143.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Car Passing.mp3"
+dest_files=["res://.godot/imported/Car Passing.mp3-86c26a4d82fd255eb235e9a3aedc2143.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,40 @@
+[gd_scene load_steps=4 format=3 uid="uid://bhkhlfr13vk1"]
+
+[ext_resource type="Script" path="res://intro_scene.gd" id="1_ji56j"]
+[ext_resource type="FontFile" uid="uid://bdgggjjkgyjut" path="res://rainyhearts.ttf" id="2_hbl4d"]
+[ext_resource type="Texture2D" uid="uid://b0s5uqfgi4e5t" path="res://Cutscenes/Scene 1.png" id="3_6tb1j"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_ji56j")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="ColorRect" type="ColorRect" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_right = 0.074
+anchor_bottom = 0.126
+offset_right = 1067.75
+offset_bottom = 576.352
+color = Color(0, 0, 0, 1)
+metadata/_edit_use_anchors_ = true
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+anchors_preset = -1
+anchor_left = -0.190104
+anchor_right = 0.203993
+anchor_bottom = 0.214506
+offset_left = 384.0
+offset_top = 406.0
+offset_right = 773.0
+offset_bottom = 466.0
+theme_override_fonts/normal_font = ExtResource("2_hbl4d")
+theme_override_font_sizes/normal_font_size = 50
+text = "Your two awesome roomates argue about
+what's better. \"Cinnamon rolls!\" The male exlaimed. \"Black-Berry Cobller!\" The female retorts."
+tab_size = 10
+metadata/_edit_use_anchors_ = true
+
+[node name="Scene1" type="Sprite2D" parent="CanvasLayer"]
+position = Vector2(581, 212)
+scale = Vector2(3.4, 2.03012)
+texture = ExtResource("3_6tb1j")

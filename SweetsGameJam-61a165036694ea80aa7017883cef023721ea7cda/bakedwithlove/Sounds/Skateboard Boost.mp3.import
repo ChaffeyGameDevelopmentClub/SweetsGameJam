@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://6gaql3x4q87m"
+path="res://.godot/imported/Skateboard Boost.mp3-a05a05721c6031b9b7d41fa50b43cae9.mp3str"
+
+[deps]
+
+source_file="res://Sounds/Skateboard Boost.mp3"
+dest_files=["res://.godot/imported/Skateboard Boost.mp3-a05a05721c6031b9b7d41fa50b43cae9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4
