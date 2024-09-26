@@ -1,10 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://cruekiimlfmij"]
+[gd_scene load_steps=5 format=3 uid="uid://cruekiimlfmij"]
 
-[ext_resource type="Texture2D" uid="uid://e2x3ascg64kf" path="res://Menu/start_skate.png" id="1_3rhp1"]
+[ext_resource type="Texture2D" uid="uid://dxbcvftx5obde" path="res://Textures/UI Assets/Large Buttons/Large Buttons/Play Button.png" id="1_b0nkp"]
 [ext_resource type="Script" path="res://UI/Title Screen/playbutton.gd" id="2_1xpxm"]
-[ext_resource type="Texture2D" uid="uid://bo085w3814lqm" path="res://Menu/exit_skate.png" id="3_1l8il"]
+[ext_resource type="Texture2D" uid="uid://capn8a4pu4kyf" path="res://Textures/UI Assets/Large Buttons/Large Buttons/Exit Button.png" id="3_50e5g"]
 [ext_resource type="Script" path="res://UI/Title Screen/exit_button.gd" id="3_bl55b"]
-[ext_resource type="Texture2D" uid="uid://8h1s37rlv5v6" path="res://Menu/title screen.png" id="5_86v8t"]
 
 [node name="Title Screen" type="Node2D"]
 
@@ -15,38 +14,30 @@ offset_top = -1.0
 offset_right = 40.0
 offset_bottom = 39.0
 
-[node name="ColorRect" type="ColorRect" parent="UI"]
-layout_mode = 0
-offset_right = 1155.0
-offset_bottom = 657.0
-color = Color(0.169245, 0.169245, 0.169245, 1)
-
 [node name="Playbutton" type="TextureButton" parent="UI"]
 layout_mode = 0
-offset_left = 430.0
-offset_top = 374.0
-offset_right = 470.0
-offset_bottom = 435.0
-scale = Vector2(5.49618, 1.62583)
-texture_normal = ExtResource("1_3rhp1")
+offset_left = 450.0
+offset_top = 263.0
+offset_right = 650.0
+offset_bottom = 333.0
+action_mode = 0
+texture_normal = ExtResource("1_b0nkp")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("2_1xpxm")
 
 [node name="ExitButton" type="TextureButton" parent="UI"]
 layout_mode = 0
-offset_left = 422.0
-offset_top = 490.0
-offset_right = 462.0
-offset_bottom = 549.0
-scale = Vector2(6.1791, 1.43703)
-texture_normal = ExtResource("3_1l8il")
+offset_left = 458.0
+offset_top = 423.0
+offset_right = 658.0
+offset_bottom = 493.0
+texture_normal = ExtResource("3_50e5g")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_bl55b")
 
 [node name="Title" type="RichTextLabel" parent="UI"]
-visible = false
 layout_mode = 0
 offset_left = 354.0
 offset_top = 115.0
@@ -55,11 +46,6 @@ offset_bottom = 184.0
 theme_override_font_sizes/normal_font_size = 50
 text = "Baked With Love"
 fit_content = true
-
-[node name="Sprite2D" type="Sprite2D" parent="UI"]
-position = Vector2(556, 194)
-scale = Vector2(1.58442, 1.71154)
-texture = ExtResource("5_86v8t")
 
 [connection signal="pressed" from="UI/Playbutton" to="UI/Playbutton" method="_on_pressed"]
 [connection signal="pressed" from="UI/ExitButton" to="UI/ExitButton" method="_on_pressed"]

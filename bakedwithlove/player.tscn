@@ -156,3 +156,5 @@ limit_left = -1275
 limit_top = -2000
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
+
+[node name="PlayerSounds" type="AudioStreamPlayer2D" parent="."]

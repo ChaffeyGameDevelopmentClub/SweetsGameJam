@@ -18,7 +18,6 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://GameManager.gd"
-Scene_Change_To="*res://scene_transition.tscn"
 
 [display]
 

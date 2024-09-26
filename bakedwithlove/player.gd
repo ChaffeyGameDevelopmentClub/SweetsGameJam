@@ -10,7 +10,7 @@ extends CharacterBody2D
 #Calculations to find exact jump velocity and gravity to create jump
 @onready var jump_velocity: float = (2.0 * jump_height)/jump_to_top * -1
 @onready var jump_gravity: float = (-2.0*jump_height) / pow(jump_to_top,2) * -1
-@onready var fall_gravity:  = (-2.0 * jump_height) / pow(jump_to_bottom, 2) * -1
+@onready var fall_gravity: float = (-2.0 * jump_height) / pow(jump_to_bottom, 2) * -1
 
 
 @onready var sprite = $PlayerSprite

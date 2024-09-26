@@ -18,5 +18,4 @@ func _on_body_entered(body: Node2D) -> void:
 			GameManager.BluePoints +=1
 		if type == "Red":
 			GameManager.RedPoints+=1
-	
 		queue_free()
