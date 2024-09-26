@@ -17,6 +17,7 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 0), Color(1, 1, 1, 1)]
 }
+<<<<<<< Updated upstream
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -29,6 +30,8 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+=======
+>>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="Animation_a4ob3"]
 resource_name = "HEAVEN_SCENE"
@@ -44,6 +47,7 @@ tracks/0/keys = {
 "update": 0,
 "values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1)]
 }
+<<<<<<< Updated upstream
 tracks/1/type = "value"
 tracks/1/imported = false
 tracks/1/enabled = true
@@ -56,6 +60,8 @@ tracks/1/keys = {
 "update": 1,
 "values": [true]
 }
+=======
+>>>>>>> Stashed changes
 
 [sub_resource type="Animation" id="Animation_fy4ye"]
 resource_name = "HEAVEN_START"

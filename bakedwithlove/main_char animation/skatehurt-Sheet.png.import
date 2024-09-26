@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://bqbq8fsldxycf"
+=======
+uid="uid://b0ydwodsuttfc"
+>>>>>>> Stashed changes
 path="res://.godot/imported/skatehurt-Sheet.png-fc0cd03989841636749e92045b2d6509.ctex"
 metadata={
 "vram_texture": false

@@ -2,7 +2,11 @@
 
 importer="texture"
 type="CompressedTexture2D"
+<<<<<<< Updated upstream
 uid="uid://fyasy34tm214"
+=======
+uid="uid://do0ivl6esv4sj"
+>>>>>>> Stashed changes
 path="res://.godot/imported/blue_progress_bar.png-acb671a4ac316c1a5fffa34cecbb7cd6.ctex"
 metadata={
 "vram_texture": false

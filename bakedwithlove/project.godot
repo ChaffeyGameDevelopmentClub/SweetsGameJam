@@ -18,7 +18,11 @@ config/icon="res://icon.svg"
 [autoload]
 
 GameManager="*res://GameManager.gd"
+<<<<<<< Updated upstream
 SceneTransition="*res://scene_transition.tscn"
+=======
+Scene_Change="*res://scene_transition.tscn"
+>>>>>>> Stashed changes
 
 [display]
 

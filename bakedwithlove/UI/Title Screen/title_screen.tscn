@@ -17,6 +17,7 @@ offset_right = 40.0
 offset_bottom = 39.0
 
 [node name="ColorRect" type="ColorRect" parent="UI"]
+<<<<<<< Updated upstream
 layout_mode = 0
 offset_right = 1185.0
 offset_bottom = 659.0
@@ -27,11 +28,43 @@ offset_left = 450.0
 offset_top = 516.0
 offset_right = 650.0
 offset_bottom = 586.0
+=======
+offset_left = -11.0
+offset_top = -24.0
+offset_right = 1179.0
+offset_bottom = 661.0
+color = Color(0.133196, 0.133196, 0.133196, 1)
+
+[node name="Sprite2D" type="Sprite2D" parent="UI"]
+position = Vector2(579.25, 215.5)
+scale = Vector2(1.82955, 1.88942)
+texture = ExtResource("1_t8hm2")
+
+[node name="Playbutton" type="TextureButton" parent="UI"]
+layout_mode = 0
+offset_left = 445.0
+offset_top = 415.0
+offset_right = 645.0
+offset_bottom = 498.0
+action_mode = 0
+texture_normal = ExtResource("2_yfuuq")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_1xpxm")
+
+[node name="ExitButton" type="TextureButton" parent="UI"]
+layout_mode = 0
+offset_left = 443.0
+offset_top = 525.0
+offset_right = 649.0
+offset_bottom = 606.0
+>>>>>>> Stashed changes
 texture_normal = ExtResource("4_frn45")
 ignore_texture_size = true
 stretch_mode = 0
 script = ExtResource("3_bl55b")
 
+<<<<<<< Updated upstream
 [node name="Playbutton" type="TextureButton" parent="UI"]
 offset_left = 450.0
 offset_top = 407.0
@@ -48,5 +81,8 @@ position = Vector2(569, 225)
 scale = Vector2(1.98864, 1.87981)
 texture = ExtResource("1_t8hm2")
 
+=======
+[connection signal="pressed" from="UI/Playbutton" to="UI/Playbutton" method="_on_pressed"]
+>>>>>>> Stashed changes
 [connection signal="pressed" from="UI/ExitButton" to="UI/ExitButton" method="_on_pressed"]
 [connection signal="pressed" from="UI/Playbutton" to="UI/Playbutton" method="_on_pressed"]
