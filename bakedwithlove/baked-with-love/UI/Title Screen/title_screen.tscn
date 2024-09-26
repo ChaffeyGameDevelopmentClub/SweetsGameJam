@@ -1,0 +1,51 @@
+[gd_scene load_steps=5 format=3 uid="uid://cruekiimlfmij"]
+
+[ext_resource type="Texture2D" uid="uid://dxbcvftx5obde" path="res://Textures/UI Assets/Large Buttons/Large Buttons/Play Button.png" id="1_b0nkp"]
+[ext_resource type="Script" path="res://UI/Title Screen/playbutton.gd" id="2_1xpxm"]
+[ext_resource type="Texture2D" uid="uid://capn8a4pu4kyf" path="res://Textures/UI Assets/Large Buttons/Large Buttons/Exit Button.png" id="3_50e5g"]
+[ext_resource type="Script" path="res://UI/Title Screen/exit_button.gd" id="3_bl55b"]
+
+[node name="Title Screen" type="Node2D"]
+
+[node name="UI" type="Control" parent="."]
+layout_mode = 3
+anchors_preset = 0
+offset_top = -1.0
+offset_right = 40.0
+offset_bottom = 39.0
+
+[node name="Playbutton" type="TextureButton" parent="UI"]
+layout_mode = 0
+offset_left = 450.0
+offset_top = 263.0
+offset_right = 650.0
+offset_bottom = 333.0
+action_mode = 0
+texture_normal = ExtResource("1_b0nkp")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("2_1xpxm")
+
+[node name="ExitButton" type="TextureButton" parent="UI"]
+layout_mode = 0
+offset_left = 458.0
+offset_top = 423.0
+offset_right = 658.0
+offset_bottom = 493.0
+texture_normal = ExtResource("3_50e5g")
+ignore_texture_size = true
+stretch_mode = 0
+script = ExtResource("3_bl55b")
+
+[node name="Title" type="RichTextLabel" parent="UI"]
+layout_mode = 0
+offset_left = 354.0
+offset_top = 115.0
+offset_right = 773.0
+offset_bottom = 184.0
+theme_override_font_sizes/normal_font_size = 50
+text = "Baked With Love"
+fit_content = true
+
+[connection signal="pressed" from="UI/Playbutton" to="UI/Playbutton" method="_on_pressed"]
+[connection signal="pressed" from="UI/ExitButton" to="UI/ExitButton" method="_on_pressed"]
