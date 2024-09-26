@@ -2,7 +2,6 @@
 
 [ext_resource type="PackedScene" uid="uid://4nv48texs04x" path="res://player.tscn" id="1_b4f2r"]
 [ext_resource type="Script" path="res://main_level.gd" id="1_dl8hb"]
-[ext_resource type="PackedScene" uid="uid://bxf7xhw400i5u" path="res://UI/pause_menu.tscn" id="2_xkfqt"]
 [ext_resource type="Texture2D" uid="uid://2ot7ypch6wru" path="res://Textures/Background/Background Props.png" id="5_m5ck7"]
 [ext_resource type="Texture2D" uid="uid://b3snfoat80pub" path="res://Textures/Assets/Tiles.png" id="6_c3uhe"]
 [ext_resource type="Texture2D" uid="uid://c8ttku5mxuqa7" path="res://Textures/Background/Base Color.png" id="6_o8h7n"]
@@ -19,6 +18,7 @@
 [ext_resource type="PackedScene" uid="uid://bdwnfl54qewkx" path="res://Obstacles/bird_obstacle.tscn" id="15_46x6v"]
 [ext_resource type="PackedScene" uid="uid://7bap4gx2qpfg" path="res://Obstacles/small_trash_obstacle.tscn" id="16_w8t17"]
 [ext_resource type="PackedScene" uid="uid://506vbiey0cpo" path="res://Obstacles/big_trash_obstacle.tscn" id="17_ml3nw"]
+[ext_resource type="PackedScene" uid="uid://bxf7xhw400i5u" path="res://UI/pause_menu.tscn" id="20_1osmr"]
 [ext_resource type="PackedScene" uid="uid://cshkt765ejb0k" path="res://UI/player_hud.tscn" id="20_4hc47"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_cg5mw"]
@@ -1706,13 +1706,9 @@ jump_height = 1500.0
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
-[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("2_xkfqt")]
-offset_left = 9.0
-offset_top = -3.0
-offset_right = 47.0
-offset_bottom = 35.0
-
 [node name="PlayerHUD" parent="CanvasLayer" instance=ExtResource("20_4hc47")]
+
+[node name="Pause Menu" parent="CanvasLayer" instance=ExtResource("20_1osmr")]
 
 [node name="Heaven" type="PointLight2D" parent="."]
 top_level = true

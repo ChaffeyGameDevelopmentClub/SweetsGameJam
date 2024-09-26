@@ -14,6 +14,7 @@ func _input(event):
 	if event.is_action_pressed("Pause"):
 		self.visible = not self.visible
 		get_tree().paused= not get_tree().paused
+		$PauseAudio.play()
 
 
 func _on_play_button_pressed() -> void:

@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://bdwnfl54qewkx"]
+[gd_scene load_steps=11 format=3 uid="uid://bdwnfl54qewkx"]
 
 [ext_resource type="Texture2D" uid="uid://cm5jj71343mpt" path="res://Textures/AnimationSprites/Pigeon Sprite Sheet.png" id="1_4i7vn"]
 [ext_resource type="Script" path="res://Obstacles/bird_obstacle.gd" id="1_5x4tp"]
+[ext_resource type="AudioStream" uid="uid://bqf3yhxsp1g4k" path="res://Sounds/Obstacle Impact (1).mp3" id="3_2wjgk"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_u7y2r"]
 
@@ -64,5 +65,8 @@ scale = Vector2(0.5, 0.5)
 color = Color(0.952941, 0.12549, 0.0745098, 1)
 energy = 5.0
 texture = SubResource("GradientTexture2D_xyhfe")
+
+[node name="obssfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_2wjgk")
 
 [connection signal="body_entered" from="." to="." method="_on_body_entered"]

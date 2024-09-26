@@ -14,5 +14,9 @@ func _process(delta: float) -> void:
 
 func _on_body_entered(body: Node2D) -> void:
 	if body.get_name() == "player":
+		$obssfx.play()
 		body.queue_free()
 		get_tree().reload_current_scene()
+		GameManager.BluePoints = 0
+		GameManager.RedPoints = 0
+		

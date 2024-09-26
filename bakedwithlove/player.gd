@@ -6,6 +6,13 @@ extends CharacterBody2D
 @export var jump_height: float
 @export var jump_to_top: float
 @export var jump_to_bottom: float
+#
+@export var rollsfx: AudioStreamPlayer
+@export var fastsfx: AudioStreamPlayer
+@export var slowsfx: AudioStreamPlayer
+
+
+
 
 #Calculations to find exact jump velocity and gravity to create jump
 @onready var jump_velocity: float = (2.0 * jump_height)/jump_to_top * -1
@@ -27,8 +34,8 @@ func getgravity()-> Vector2:
 
 
 func _physics_process(delta: float) -> void:
-	
-	#checks if player isn't on floor. Applies coyote time. Applies gravity
+	playerAudio()
+		#checks if player isn't on floor. Applies coyote time. Applies gravity
 	if not is_on_floor():
 		coyoteTime()
 		velocity += getgravity() * delta
@@ -92,3 +99,15 @@ func coyoteTime():
 func rememberJumpBuffer():
 	await get_tree().create_timer(.1).timeout
 	jumpBuffer = false
+
+func playerAudio():
+	if Input.is_action_just_pressed("Left"):
+		slowsfx.play()
+	if Input.is_action_just_pressed("Right"):
+		fastsfx.play()
+	if Input.is_action_just_released("Left"):
+		slowsfx.stop()
+	if Input.is_action_just_pressed("Jump"):
+		$jumpsfx.play()
+	if Input.is_action_just_released("Jump"):
+		$jumpsfx.stop()

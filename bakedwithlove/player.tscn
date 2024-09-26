@@ -1,4 +1,4 @@
-[gd_scene load_steps=22 format=3 uid="uid://4nv48texs04x"]
+[gd_scene load_steps=26 format=3 uid="uid://4nv48texs04x"]
 
 [ext_resource type="Script" path="res://player.gd" id="1_aueos"]
 [ext_resource type="Texture2D" uid="uid://cvf337w12anhj" path="res://Textures/AnimationSprites/skater crouching-Sheet.png" id="2_j7ash"]
@@ -6,6 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://dxsytsu1h4uq6" path="res://Textures/AnimationSprites/skater jump-Sheet.png" id="4_xyr11"]
 [ext_resource type="Texture2D" uid="uid://c4dhtw8gxvufm" path="res://Textures/AnimationSprites/skater braking-Sheet.png" id="5_31o0r"]
 [ext_resource type="Texture2D" uid="uid://beeoy7f3jxdjj" path="res://Textures/AnimationSprites/skateboard speed up-Sheet.png" id="6_ieb3r"]
+[ext_resource type="AudioStream" uid="uid://7nncvnq22kej" path="res://Sounds/Skateboard Brake.mp3" id="7_uks5c"]
+[ext_resource type="AudioStream" uid="uid://7y7x4josd6rt" path="res://Sounds/Skateboard Rolling.mp3" id="8_f836h"]
+[ext_resource type="AudioStream" uid="uid://6gaql3x4q87m" path="res://Sounds/Skateboard Boost.mp3" id="9_s23uf"]
+[ext_resource type="AudioStream" uid="uid://t4smljh222hc" path="res://Sounds/Sick Kickflip (jump).mp3" id="10_7e7be"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_p2tx2"]
 atlas = ExtResource("2_j7ash")
@@ -129,13 +133,16 @@ animations = [{
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_krlxw"]
 size = Vector2(20, 35)
 
-[node name="player" type="CharacterBody2D"]
+[node name="player" type="CharacterBody2D" node_paths=PackedStringArray("rollsfx", "fastsfx", "slowsfx")]
 scale = Vector2(2.5, 2.5)
 script = ExtResource("1_aueos")
 speed = 400.0
 jump_height = 300.0
 jump_to_top = 1.0
 jump_to_bottom = 0.5
+rollsfx = NodePath("Rollsfx")
+fastsfx = NodePath("fastsfx")
+slowsfx = NodePath("slowsfx")
 metadata/_edit_group_ = true
 
 [node name="PlayerSprite" type="AnimatedSprite2D" parent="."]
@@ -151,10 +158,24 @@ shape = SubResource("RectangleShape2D_krlxw")
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(404.4, -188.8)
+scale = Vector2(1, 1)
 zoom = Vector2(0.2, 0.2)
 limit_left = -1275
 limit_top = -2000
 position_smoothing_enabled = true
 position_smoothing_speed = 3.0
 
-[node name="PlayerSounds" type="AudioStreamPlayer2D" parent="."]
+[node name="slowsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_uks5c")
+volume_db = -26.001
+
+[node name="Rollsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_f836h")
+volume_db = 24.0
+
+[node name="fastsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_s23uf")
+volume_db = 0.17
+
+[node name="jumpsfx" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_7e7be")
