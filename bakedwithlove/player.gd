@@ -39,7 +39,8 @@ func _physics_process(delta: float) -> void:
 	if not is_on_floor():
 		coyoteTime()
 		velocity += getgravity() * delta
-	
+	if Input.is_action_pressed("Warp"):
+		warp()
 	
 	
 	# Handles Jump. Sets up Jump Buffer timer
@@ -99,6 +100,16 @@ func coyoteTime():
 func rememberJumpBuffer():
 	await get_tree().create_timer(.1).timeout
 	jumpBuffer = false
+	
+func warp() -> void:
+		if GameManager.BluePoints >> GameManager.RedPoints:
+			SceneTransition.heaven_ascension("res://ending_a_1.tscn")
+		elif GameManager.RedPoints >> GameManager.BluePoints:
+			SceneTransition.heaven_ascension("res://ending_b_1.tscn")
+		else:
+			SceneTransition.heaven_ascension("res://ending_a_1.tscn")
+		pass
+
 
 func playerAudio():
 	if Input.is_action_just_pressed("Left"):

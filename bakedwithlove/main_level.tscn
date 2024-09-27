@@ -1707,7 +1707,7 @@ script = ExtResource("21_crla7")
 light_mask = 2
 visibility_layer = 2
 z_index = 1
-position = Vector2(-1064, 511)
+position = Vector2(-536, 335)
 speed = 1000.0
 jump_height = 1500.0
 
@@ -1725,5 +1725,9 @@ energy = 144.35
 texture = SubResource("GradientTexture2D_o01yb")
 
 [node name="ASCENSION" parent="." instance=ExtResource("13_8pmxo")]
+position = Vector2(128897, 1106)
+script = ExtResource("21_crla7")
+
+[node name="ASCENSION" parent="ASCENSION" instance=ExtResource("13_8pmxo")]
 position = Vector2(128897, 1106)
 script = ExtResource("21_crla7")

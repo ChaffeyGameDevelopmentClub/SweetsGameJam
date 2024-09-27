@@ -46,7 +46,7 @@ stretch_mode = 0
 script = ExtResource("2_1xpxm")
 
 [node name="TitleScreen" type="Sprite2D" parent="UI"]
-position = Vector2(569, 225)
+position = Vector2(567, 250)
 scale = Vector2(1.98864, 1.87981)
 texture = ExtResource("1_t8hm2")
 

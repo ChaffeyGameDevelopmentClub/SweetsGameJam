@@ -15,6 +15,8 @@ func _on_body_entered(body: Node2D) -> void:
 	if body.get_name() == "player":
 		if GameManager.BluePoints >> GameManager.RedPoints:
 			SceneTransition.heaven_ascension("res://ending_a_1.tscn")
-		if GameManager.RedPoints >> GameManager.BluePoints:
+		elif GameManager.RedPoints >> GameManager.BluePoints:
 			SceneTransition.heaven_ascension("res://ending_b_1.tscn")
+		else:
+			SceneTransition.heaven_ascension("res://ending_a_1.tscn")
 		pass
