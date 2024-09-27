@@ -23,6 +23,7 @@ offset_bottom = 659.0
 color = Color(0.133196, 0.133196, 0.133196, 1)
 
 [node name="ExitButton" type="TextureButton" parent="UI"]
+layout_mode = 0
 offset_left = 450.0
 offset_top = 516.0
 offset_right = 650.0
@@ -33,6 +34,7 @@ stretch_mode = 0
 script = ExtResource("3_bl55b")
 
 [node name="Playbutton" type="TextureButton" parent="UI"]
+layout_mode = 0
 offset_left = 450.0
 offset_top = 407.0
 offset_right = 650.0
